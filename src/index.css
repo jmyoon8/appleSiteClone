@@ -2,12 +2,24 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer components{
-    .content{
-        @apply border-[20px]
+
+@layer base{
+    body{
+        @apply overflow-x-hidden  text-[#1d1d1f] 
+        tracking-[-0.05rem] bg-white border-[2px]
     }
+    html{
+        @apply text-[14px]
+    }
+
+}
+html{
+    font-size: 14px;
 }
 
+p{
+    line-height: 1.6;
+}
 *{
     box-sizing: border-box;
 }
