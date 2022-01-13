@@ -1,13 +1,86 @@
 @tailwind components;
-
 @layer components{
     .container{
-        @apply w-[100%]
+        @apply w-[100%] h-[100%]  m-[auto] 
     }
     .global-nav{
-        @apply h-[44px] 
+        @apply h-[44px] w-[100%] flex justify-center 
     }
-    .global-nav-links{
-        @apply flex justify-between 
+    .global-nav-links,
+    .local-nav-links{
+        @apply flex items-center
+         w-[100%] h-[100%] max-w-[1000px]
+         px-[0.5rem] 
+    }
+    .global-nav-links {
+        @apply justify-between
+    }
+    .local-nav{
+        @apply flex justify-center w-[100%] h-[52px]
+        border-b-[1px] border-b-[#ddd] border-solid
+    }
+    .product-name{
+        /* 마진 롸이트 - auto => 오른쪽마진을 전부준다는 얘기 때문에 자기자신을 제외한 것들은 전부 오른쪾으로 민다. */
+        @apply mr-[auto] text-[1.5rem] font-bold
+    }
+    /*  not()은 괄호안에 클래스들은 제외한다. */
+    .local-nav-links a:not(.product-name){
+        @apply ml-[2rem] 
+    }
+    .scroll-section{
+        @apply pt-[50vh]  p-[0.5rem] 
+    }
+    #scroll-section-0 h1{
+        @apply text-[4rem] text-center font-bold
+    }
+    .main-message{
+        @apply flex items-center justify-center 
+        text-[2.5rem] h-[3em] text-center font-bold
+    }
+    .nomalScroll{
+        @apply flex justify-center
+    }
+    .description{
+        @apply max-w-[1000px] md:max-w-[90%]
+        text-[1.2rem] text-[#888] px-[1rem] py-[0px] 
+    }
+    .description strong{
+        /* em은 부모의 font size에 따른다. */
+        @apply text-[2.7rem] float-left text-[rgb(29,29,30)] 
+        mr-[0.3em]
+    }
+    .main-message small{
+        @apply block text-[1.2rem] mb-[0.5em]
+    }
+    #scroll-section-2 .main-message{
+        @apply text-[3.5rem] 
+    }
+    .desc-message{
+        @apply font-bold w-[20%] md:w-[50%]
+    }
+    .pin{
+        @apply w-[1px] h-[100px] bg-[#000]
+    }
+    .mid-message{
+        @apply text-[4vw] text-[#888] max-w-[1000px] m-[auto]
+    }
+    .mid-message strong{
+        @apply text-[#000] block
+    }
+    .canvas-caption{
+        @apply text-[1.3rem] py-[1rem] max-w-[1000px] m-[auto] text-[#888] 
+    }
+    .footer{
+        @apply flex justify-center items-center h-[7rem] bg-[darkorange] text-[#fff]
+    }
+    .sticky-elem {
+        /* 기본적으로 화면에 붙는에들은 숨김처리한다. 노출은 js으로 컨트롤 */
+        @apply fixed top-[0] left-[0] w-[100%] hidden
+    }
+    #show-scene-0 #scroll-section-0 .sticky-elem,
+    #show-scene-1 #scroll-section-1 .sticky-elem,
+    #show-scene-2 #scroll-section-2 .sticky-elem,
+    #show-scene-3 #scroll-section-3 .sticky-elem{
+        @apply block
     }
 }

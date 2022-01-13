@@ -1,32 +1,16 @@
 import React from "react";
+import Interaction from "./Components/Interaction";
+import MainNav from "./Components/MainNav";
+import SubNav from "./Components/SubNav";
 
 function App() {
   return (
-    <div className="container">
-      <nav className="global-nav">
-        <div className="global-nav-links">
-          <a href="#!" className="global-nav-item">
-            Rooms
-          </a>
-          <a href="#!" className="global-nav-item">
-            Ideas
-          </a>
-          <a href="#!" className="global-nav-item">
-            Stores
-          </a>
-          <a href="#!" className="global-nav-item">
-            Contact
-          </a>
-        </div>
-      </nav>
-      <nav className="local-nav">
-        <div className="local-nav-links">
-          <a href="#!">AirMug Pro</a>
-          <a href="#!">개요</a>
-          <a href="#!">제품사양</a>
-          <a href="#!">구입하기</a>
-        </div>
-      </nav>
+    // 아래 div의 show-scene-N 바뀔때마다 scroll-section-N의 display가 block
+    <div className="container" id="show-scene">
+      <MainNav />
+      <SubNav />
+      <Interaction />
+      <footer className="footer">2020 1분 코딩</footer>
     </div>
   );
 }

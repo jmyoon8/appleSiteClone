@@ -6,20 +6,21 @@
 @layer base{
     body{
         @apply overflow-x-hidden  text-[#1d1d1f] 
-        tracking-[-0.05rem] bg-white border-[2px]
+        tracking-[-0.05rem] bg-white 
     }
     html{
-        @apply text-[14px]
+        @apply text-[16px] font-noto md:text-[13px]
+    }
+    *{
+        @apply box-border
+    }
+    p{
+        @apply leading-[1.2] 
+    }
+    a{
+        @apply text-[rgb(29,29,31)] hover:underline  text-[1rem]
     }
 
 }
-html{
-    font-size: 14px;
-}
 
-p{
-    line-height: 1.6;
-}
-*{
-    box-sizing: border-box;
-}
+

@@ -18,7 +18,8 @@
     "prettier/prettier": 0,
     "react/jsx-filename-extension": [2, { "extensions": [".js", ".jsx", ".ts", ".tsx"] }],
     "quotes": [2, "double"],
-    "react/no-unescaped-entities": 0 
+    "react/no-unescaped-entities": 0 ,
+    "react/self-closing-comp":0
   },
   "settings": {
     "import/resolver": {

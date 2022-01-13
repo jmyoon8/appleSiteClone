@@ -10,6 +10,9 @@ module.exports = {
         max: "1023px",
       },
     },
+    fontFamily: {
+      noto: [" Noto Sans KR", "sans-serif"],
+    },
   },
   plugins: [],
 };
