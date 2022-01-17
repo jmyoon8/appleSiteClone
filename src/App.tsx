@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import Interaction from "./Components/Interaction";
 import MainNav from "./Components/MainNav";
 import SubNav from "./Components/SubNav";
@@ -9,6 +9,7 @@ function App() {
     <div className="container" id="show-scene">
       <MainNav />
       <SubNav />
+
       <Interaction />
       <footer className="footer">2020 1분 코딩</footer>
     </div>

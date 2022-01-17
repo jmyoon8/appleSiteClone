@@ -5,6 +5,7 @@
     }
     .global-nav{
         @apply h-[44px] w-[100%] flex justify-center 
+        absolute top-0 left-0 
     }
     .global-nav-links,
     .local-nav-links{
@@ -18,6 +19,7 @@
     .local-nav{
         @apply flex justify-center w-[100%] h-[52px]
         border-b-[1px] border-b-[#ddd] border-solid
+        absolute top-[44px] left-0 
     }
     .product-name{
         /* 마진 롸이트 - auto => 오른쪽마진을 전부준다는 얘기 때문에 자기자신을 제외한 것들은 전부 오른쪾으로 민다. */
@@ -28,7 +30,7 @@
         @apply ml-[2rem] 
     }
     .scroll-section{
-        @apply pt-[50vh]  p-[0.5rem] 
+        @apply pt-[50vh] p-[0.5rem] border-[red] border-[3px]
     }
     #scroll-section-0 h1{
         @apply text-[4rem] text-center font-bold
@@ -56,7 +58,7 @@
         @apply text-[3.5rem] 
     }
     .desc-message{
-        @apply font-bold w-[20%] md:w-[50%]
+        @apply font-bold max-w-[20%] md:max-w-[50%]
     }
     .pin{
         @apply w-[1px] h-[100px] bg-[#000]
@@ -74,13 +76,16 @@
         @apply flex justify-center items-center h-[7rem] bg-[darkorange] text-[#fff]
     }
     .sticky-elem {
-        /* 기본적으로 화면에 붙는에들은 숨김처리한다. 노출은 js으로 컨트롤 */
-        @apply fixed top-[0] left-[0] w-[100%] hidden
+        /* 기본적으로 화면에 붙는에들은(sticky) 숨김처리한다. 노출은 js으로 컨트롤 */
+        @apply fixed top-[0] left-[0] w-[100%] 
     }
-    #show-scene-0 #scroll-section-0 .sticky-elem,
+    #scroll-section-3{
+        @apply px-[1.2rem]
+    }
+    /* #show-scene-0 #scroll-section-0 .sticky-elem,
     #show-scene-1 #scroll-section-1 .sticky-elem,
     #show-scene-2 #scroll-section-2 .sticky-elem,
     #show-scene-3 #scroll-section-3 .sticky-elem{
         @apply block
-    }
+    } */
 }

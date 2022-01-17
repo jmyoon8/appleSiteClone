@@ -19,7 +19,9 @@
     "react/jsx-filename-extension": [2, { "extensions": [".js", ".jsx", ".ts", ".tsx"] }],
     "quotes": [2, "double"],
     "react/no-unescaped-entities": 0 ,
-    "react/self-closing-comp":0
+    "react/self-closing-comp":0,
+    "no-unused-expressions": "off",
+    "@typescript-eslint/no-unused-expressions":0
   },
   "settings": {
     "import/resolver": {
